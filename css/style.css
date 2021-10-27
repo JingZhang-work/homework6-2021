@@ -1,0 +1,156 @@
+body{
+    /* margin: 0;
+    padding: 0;
+    font-size: 16pt; test for this! Make all sizes em or rem */
+    /* 3 */
+    font-family: 'Alegreya Sans SC', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+
+  header{
+    /* background: #fff;
+    border-bottom: 3px solid #50C7C7; */
+    /* 4 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 5 */
+  .nav_links a:visited{
+    color: blue;
+  }
+
+  /* 6 */
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 7 */
+  .card header{
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-radius: 7px 7px 0 0;
+  }
+
+  /* 8 */
+  .pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 9 */
+  .card{
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+  }
+
+  /* 10 */
+  .gallery > img{
+    border: 10px #50C7C7 solid;
+    margin: 10px;
+    width: 300px;
+  }
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 11 */
+  #logo{
+    animation-name: logo_grow;
+    animation-duration: 5s;
+  }
+
+  @-webkit-keyframes logo_grow{
+    from {width: 50px; opacity: 0;}
+    to {width: 425px; opacity: 1;}
+  }
+
+  @keyframes logo_grow{
+    from {width: 50px; opacity: 0;}
+    to {width: 425px; opacity: 1;}
+  }
+
+
+  /* 12 */
+  @media screen and (min-width: 850px){
+
+    body > header{
+      flex-direction: row;
+      justify-content: space-between;
+      position: sticky;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+    }
+
+    .nav_links{
+      flex-direction: row;
+    }
+
+    /* 13 */
+    .card{
+      flex-basis: 250px;
+    }
+  }
+
+  /* 14 */
+  @media screen and (prefers-reduced-motion: reduce){
+    #logo{
+      animation: none;
+    }
+  }
+
+  @media print{
+    /* 15 */
+    body{
+      background-image: none;
+    }
+
+    /* 16 */
+    nav {
+      width: 100%;
+    }
+    
+    .nav_links{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    /* 17 */
+    .pricing{
+      align-items: flex-end;
+    }
+
+    /* 18 */
+    .card{
+      border: 2px solid #45ADDD;
+      flex-basis: 250px;
+    }
+
+    /* 19 */
+    .gallery, #gallery{
+      display: none;
+    }
+
+    /* 20*/
+    .card > ul > li:nth-child(2n+1)::before{
+      content: "👍 ";
+    }
+    .card > ul > li:nth-child(2n)::after{
+      content: "👍 ";
+    }
+  }
+
